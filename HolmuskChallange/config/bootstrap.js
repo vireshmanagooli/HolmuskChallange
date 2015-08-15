@@ -11,11 +11,7 @@
 
 module.exports.bootstrap = function(cb) {
 
-  sails.simplecrawler = require("simplecrawler");
-  sails.cheerio = require('cheerio');
-  sails.request = require("request");
-  sails.highland = require('highland');
-  //sails.osmosis = require("osmosis");
+  sails.simplecrawler = require("simplecrawler");    
   sails.xray = require("x-ray");
   // It's very important to trigger this callback method when you are finished
   // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)

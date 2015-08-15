@@ -67,7 +67,7 @@ $( document ).ready(function() {
     console.log("Selected Object : " + map[datum]);
     var food = map[datum];
     $.ajax({
-                url: "http://localhost:1337/food?id="+food._id,                
+                url: "http://localhost:1337/food?id="+food.id,                
                 method: "GET",                
                 success: function(data){                                                              
                   pupulateData(data);                          
