@@ -9,12 +9,12 @@ Pre requisite to run this application is to install the following
 3.	MongoDB: http://docs.mongodb.org/manual/installation/
 
 ## Start the MongoDB server
-Command: mongod.exe --config D:\ProjectFolder\Database\mongodb\mongo.config
+<b>Command:</b> mongod.exe --config mongo.config
 
-Note: Make sure server get started at default port 27017
+<b>Note:</b> Make sure server get started at default port 27017
 
 ## Start the Sails.js
-Command: sails lift
+<b>Command:</b> sails lift
 
 Server will be started and will be available at: http://localhost:1337/
 
@@ -33,7 +33,7 @@ Select any items from the drop down to get the detailed description.
 ## Manual Fill
 Enter Name, Company name and other nutrition details and click Add Data to save to Database.
 
-Note: Name is mandatory field. As searching is done based on Name
+<b>Note:<b> Name is mandatory field. As searching is done based on Name
 
 ## Areas of Improvement
 1.	Searching using Elastic search will be more ideal.
