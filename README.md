@@ -38,7 +38,7 @@ Enter Name, Company name and other nutrition details and click Add Data to save 
 ## Areas of Improvement
 1.	Searching using Elastic search will be more ideal.
 2.	To scrape entire web, multiple connections has to be maintained so that it should not go to timeout state.
-3.	Scraped data before inserting into the database check for the duplicate item.
+3.	Check for the duplicate items before inserting into DB.
 
 
 
