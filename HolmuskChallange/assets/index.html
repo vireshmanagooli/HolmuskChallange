@@ -21,91 +21,83 @@
 	<hr>
 
 	<h3>Scrape Data:</h3>	
-
-	<button class="btn btn-primary" ng-disabled="error || incomplete">
+	<div id="scrapeSuccess" class="alert alert-success" style="display: none;" role="alert">Scraping started. Wait for few minutes.</div>
+	<button id="scrape" class="btn btn-primary" ng-disabled="error || incomplete">
 	<span class="glyphicon glyphicon-book"></span> Start Scraping
 	</button>	
 	<hr>
 
 	<h3>Add Data Manually:</h3>
-	<form id="addManualForm" class="col-md-8">
+	<form id="addManualForm" class="col-md-12">
 	  <div id="dataSaveSuccess" class="alert alert-success" style="display: none;" role="alert">Data has been saved.</div>
 	  <div class="row">
-	  	<div class="col-md-4">	  		
+	  	<div class="col-md-3">	  		
 	    	<input class="form-control" name="name" id="name" placeholder="Name">
 	  	</div>
-	    <div class="col-md-4">	    	
+	    <div class="col-md-3">	    	
 	    	<input class="form-control" name="company" id="company" placeholder="Company">
 		</div>
 	  </div>	
 	  <hr>  
 	  <div class="row">
-	  	<div class="col-md-4">	  		
+	  	<div class="col-md-3">	  		
 	    	<input class="form-control" name="calories" id="calories" placeholder="Calories">
 	  	</div>
-	    <div class="col-md-4">	    	
+	    <div class="col-md-3">	    	
 	    	<input class="form-control" name="sodium" id="sodium" placeholder="Sodium">
-		</div>
-	  </div>	
-	  <div class="row">
-	  	<div class="col-md-4">	  		
+		</div>	  
+	  	<div class="col-md-3">	  		
 	    	<input class="form-control" name="totalFat" id="totalFat" placeholder="Total Fat">
 	  	</div>
-	    <div class="col-md-4">	    	
+	    <div class="col-md-3">	    	
 	    	<input class="form-control" name="potassium" id="potassium" placeholder="Potassium">
 		</div>
 	  </div>
 	  <div class="row">
-	  	<div class="col-md-4">	  		
+	  	<div class="col-md-3">	  		
 	    	<input class="form-control" name="saturated" id="saturated" placeholder="Saturated">
 	  	</div>
-	    <div class="col-md-4">	    	
+	    <div class="col-md-3">	    	
 	    	<input class="form-control" name="totalCarbs" id="totalCarbs" placeholder="Total Carbs">
-		</div>
-	  </div>
-	  <div class="row">
-	  	<div class="col-md-4">	  		
+		</div>	  
+	  	<div class="col-md-3">	  		
 	    	<input class="form-control" name="polyunsaturated" id="polyunsaturated" placeholder="Polyunsaturated">
 	  	</div>
-	    <div class="col-md-4">	    	
+	    <div class="col-md-3">	    	
 	    	<input class="form-control" name="dietaryFiber" id="dietaryFiber" placeholder="Dietary Fiber">
 		</div>
 	  </div>
 	  <div class="row">
-	  	<div class="col-md-4">	  		
+	  	<div class="col-md-3">	  		
 	    	<input class="form-control" name="monounsaturated" id="monounsaturated" placeholder="Monounsaturated">
 	  	</div>
-	    <div class="col-md-4">	    	
+	    <div class="col-md-3">	    	
 	    	<input class="form-control" name="sugars" id="sugars" placeholder="Sugars">
-		</div>
-	  </div>
-	  <div class="row">
-	  	<div class="col-md-4">	  		
+		</div>	  
+	  	<div class="col-md-3">	  		
 	    	<input class="form-control" name="trans" id="trans" placeholder="Trans">
 	  	</div>
-	    <div class="col-md-4">	    	
+	    <div class="col-md-3">	    	
 	    	<input class="form-control" name="protein" id="protein" placeholder="Protein">
 		</div>
 	  </div>
 	  <div class="row">
-	  	<div class="col-md-4">	  		
+	  	<div class="col-md-3">	  		
 	    	<input class="form-control" name="cholesterol" id="cholesterol" placeholder="Cholesterol">
 	  	</div>	    
 	  </div>
 	  <hr>
 	  <div class="row">
-	  	<div class="col-md-4">	    	
+	  	<div class="col-md-3">	    	
 	    	<input class="form-control" name="vitaminA" id="vitaminA" placeholder="Vitamin A">
 		</div>
-	  	<div class="col-md-4">	
+	  	<div class="col-md-3">	
 	    	<input class="form-control" name="calcium" id="calcium" placeholder="Calcium">
-	  	</div>	    
-	  </div>
-	  <div class="row">
-	  	<div class="col-md-4">	    	
+	  	</div>	    	  
+	  	<div class="col-md-3">	    	
 	    	<input class="form-control" name="vitaminC" id="vitaminC" placeholder="Vitamin C">
 		</div>
-	  	<div class="col-md-4">	  		
+	  	<div class="col-md-3">	  		
 	    	<input class="form-control" name="iron" id="iron" placeholder="Iron">
 	  	</div>	    
 	  </div>

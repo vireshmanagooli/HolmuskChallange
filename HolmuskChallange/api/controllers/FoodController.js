@@ -6,6 +6,12 @@
  */
 
 module.exports = {	
+
+	/**
+	*	This is the search functionality. When query string is passed, then 
+	*	It will look for approrpiate phrase in the database. 
+	*   It will return the array of all objects with only name and  id fields.
+	*/
   	search:function(req,res){
   		var query = req.param('q');  	
   		console.log("Query : " + query);
@@ -20,6 +26,12 @@ module.exports = {
   		});		
   	},
 
+  	/**
+  	*	This is the scarpe & crawling functionality. The crwaling will be started at the following URL
+  	*	http://www.myfitnesspal.com/food/calorie-chart-nutrition-facts,
+  	* 	checks any of the URL has the phrase http://www.myfitnesspal.com/food/calories/, then 
+  	*   it will scrape that perticular URL and saves it to DB.
+  	*/
   	scrape:function(req,res){
 
   		var xray = sails.xray();  		
@@ -50,11 +62,9 @@ module.exports = {
 					}
 
 					console.log("name, company : " + name + " "+ company);
-					//populate the nutrician contents.
-					var scrapedFood = {
-							name: name,	
-							company: company,
-					      	calories: obj.nutritions[1], 
+					
+					var scrapedNutrition = {
+							calories: obj.nutritions[1], 
 					      	sodium: obj.nutritions[3],
 							totalFat: obj.nutritions[5],	
 							potassium: obj.nutritions[7],
@@ -70,7 +80,14 @@ module.exports = {
 							vitaminA: obj.nutritions[29],	
 							calcium: obj.nutritions[31],	
 							vitaminC: obj.nutritions[33],	
-							iron: obj.nutritions[35]	
+							iron: obj.nutritions[35]
+					};
+					
+					//populate the nutrician contents.
+					var scrapedFood = {
+							name: name,	
+							company: company,
+					      	nutrition: scrapedNutrition,	
 					};										
 
 					//persist into database.
@@ -86,5 +103,6 @@ module.exports = {
 			}
 			//Else skip the crawling			
 		});
+		res.json({message: "Scraping started"});
   	}
 };
