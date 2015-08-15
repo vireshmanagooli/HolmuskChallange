@@ -33,7 +33,7 @@ Select any items from the drop down to get the detailed description.
 ## Manual Fill
 Enter Name, Company name and other nutrition details and click Add Data to save to Database.
 
-<b>Note:<b> Name is mandatory field. As searching is done based on Name
+<b>Note:</b> Name is mandatory field. As searching is done based on Name
 
 ## Areas of Improvement
 1.	Searching using Elastic search will be more ideal.
